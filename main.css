@@ -1,0 +1,97 @@
+* {
+    font-family: "MS Gothic" !important;
+}
+
+*[class*="messageContent"] > * {
+    font-size: 15px !important;
+}
+
+*[class*="scrollerInner"] {
+    transform: perspective(600vh) rotateX(0deg) rotateY(-2deg) rotateZ(0deg);
+}
+
+*[class*="scrollerInner"] > li {
+    text-shadow: 1px 1px 7px;
+    animation: pulse 5.5s linear infinite;
+    transform-origin: 65% 50%;
+    margin-top: 18px;
+}
+
+*[class*="message"] > *[class*="contents"] > h3 > img {
+    display: inline-block;
+    animation: pulse 7.5s linear infinite;
+    animation-delay: -0.4s;
+}
+
+*[class*="message"] > *[class*="contents"] > h3 > span[id*="message-username"] {
+    display: inline-block;
+    margin-left: 70px;
+    margin-right: 20px;
+    animation: pulse 7.5s linear infinite;
+    animation-delay: -0.4s;
+}
+*[class*="message"] > *[class*="contents"] > h3 > span[id*="message-username"]:nth-child(2n) {
+    animation-delay: -5.2s;
+}
+
+*[class*="scrollerInner"] > li:nth-child(2n) {
+    animation-delay: -0.2s;
+}
+*[class*="scrollerInner"] > li:nth-child(3n) {
+    animation-delay: -2.3s;
+}
+*[class*="scrollerInner"] > li:nth-child(4n) {
+    animation-delay: -3.5s;
+}
+*[class*="scrollerInner"] > li:nth-child(5n) {
+    animation-delay: -4.1s;
+}
+
+*[class*="scrollerInner"] > li > *:hover {
+    transform: scale(1.1, 1.9) translate(0.5vw, 0);
+}
+
+*[class*="scrollerInner"] > li > *:hover[aria-labelledby*="message-accessories"] {
+    transform: scale(1.0, 1.0) translate(0.5vw, 0);
+}
+
+*[class*="scrollerInner"] > li > * {
+    transition: transform 0.3s;
+}
+
+*[id*="message-accessories"] {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    transition: 0.3s;
+}
+
+*[class*="scrollerInner"] > li > *:hover > *[id*="message-accessories"] {
+    transform: scale(1.0, 1.0);
+}
+
+ul[class*="content"] {
+    text-shadow: 1px 1px 5px;
+    transform: perspective(600vh) rotateX(0deg) rotateY(-10deg) rotateZ(-0deg);
+}
+
+ul[class*="content"] > li {
+    animation: pulse 10.5s linear infinite;
+}
+ul[class*="content"] > li:nth-child(2n) {
+    animation-delay: -0.2s;
+}
+ul[class*="content"] > li:nth-child(3n) {
+    animation-delay: -2.3s;
+}
+
+@keyframes pulse {
+    100%,0% {
+        transform: scale(1.0, 1.1);
+    }
+    25% {
+        transform: scale(0.99, 1.21) translate(0, 10px) rotate(1deg);
+    }
+    75% {
+        transform: scale(1.01, 1.09) translate(0, -2px) rotate(-1deg);
+    }
+}
